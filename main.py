@@ -15,6 +15,9 @@ width, height = 110, 45
 #load the video file
 cap = cv2.VideoCapture('demo.mp4')
 
+#number of pixels of spot when it's filled by car
+countCar = 900
+
 def checkParkingPlace(imgDilate):
     freePlaces = 0
 
@@ -22,7 +25,7 @@ def checkParkingPlace(imgDilate):
         x, y = place
         imgCrop = imgDilate[y:y + height, x:x + width]
         count = cv2.countNonZero(imgCrop)
-        if count < 900:
+        if count < countCar:
             color = (0, 255, 0)
             freePlaces += 1
         else:
