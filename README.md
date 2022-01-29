@@ -7,6 +7,6 @@
 Parking spot detection system using OpenCV and Python.
 
 ## How to use?
-First you must to select the width and the height of the rectangle that will be used to check if the parking space is available or not.
+First you must to select the width and the height and the countCar of the rectangle that will be used to check if the parking space is available or not.
 - you can add a parking space with left click of the mouse
 - also you can delete a parking space using right click of the mouse
